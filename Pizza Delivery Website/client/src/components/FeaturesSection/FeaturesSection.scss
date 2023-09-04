@@ -1,0 +1,78 @@
+@import  "../../css-config/mixins.scss";
+
+
+.featuresSection {
+    width: 100%;
+    padding: 55px 30px 0 30px;
+ 
+    .container {
+        max-width: 1600px;
+        margin: 0 auto;
+        .top {
+            text-align: center;
+            h3 {
+                color: #FF0404;
+                font-size: 20px;
+                @include lg {
+                    font-size: 30px;
+                }
+            }
+            h1 {
+                font-size: 30px;
+                line-height: 140.523%; /* 77.288px */
+                letter-spacing: 1.1px;
+                @include md {
+                    font-size: 40px;
+                }
+                @include lg {
+                    font-size: 55px;
+                }
+            }
+        }
+        .bottom {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            margin-top: 60px;
+            @include md {
+                flex-direction: row;
+            }
+            @include lg {
+                margin-top: 100px;
+            }
+            .feature {
+                text-align: center;
+                margin-bottom: 50px;
+                img {
+                    width: 245px;
+                    height: 270px;
+                    @include md {
+                        width: 180px;
+                        height: 200px;
+                    }
+                    @include lg {
+                        width: 275px;
+                        height: 304px;
+                    }
+                }
+                h3 {
+                    font-size: 25px;
+                    font-weight: 600;
+                    margin-top: 12px;
+                    @include lg {
+                        font-size: 30px;
+                    }
+                }
+                p {
+                    color: #525252;
+                    font-size: 22px;
+                    font-weight: 300;
+                    margin-top: 40px;
+                    @include lg {
+                        font-size: 30px;
+                    }
+                }
+            }
+        }
+    }
+}

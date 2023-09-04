@@ -1,0 +1,118 @@
+@import "../../css-config/mixins.scss";
+
+.FullCartPage {
+    width: 100%;
+    padding: 20px;
+
+    .container {
+        max-width: 1400px;
+        margin: 0 auto;
+        margin-top: 55px;
+        min-height: 80vh;
+
+        .title {
+            display: flex;
+            gap: 25px;
+            margin-bottom: 30px;
+
+            svg {
+                font-size: 28px;
+                @include sm {
+                    font-size: 42px;
+                }
+            }
+
+            span {
+                font-size: 28px;
+                @include sm {
+                    font-size: 35px;
+                }
+            }
+        }
+
+        hr {
+            background: #000;
+            height: 2px;
+            border: #000;
+            margin-bottom: 25px;
+        }
+
+        .cart {
+            display: grid;
+            grid-template-columns: 100%;
+            gap: 30px;
+
+            @include lg {
+                grid-template-columns: 60% 40%;
+            }
+
+            .left {
+                .item-wrapper {
+                    overflow-y: scroll;
+                    overflow-x: scroll;
+
+                    &::-webkit-scrollbar {
+                        display: none;
+                    }
+
+                    .items {
+                        // margin: 30px 40px 30px 0;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 35px;
+                        max-height: 450px;
+                        min-width: 450px;
+                    }
+                }
+
+                .cart-bill {
+                    margin-top: 20px;
+
+                    .total {
+                        display: flex;
+                        justify-content: center;
+                        @include lg {
+                            justify-content: flex-end;
+                        }
+                        .total_center {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 32px;
+                            margin-top: 20px;
+
+                            h3 {
+                                font-size: 22px;
+                                @include sm {
+                                    font-size: 28px;
+                                }
+
+                                span {
+                                    color: #FF0404;
+                                }
+                            }
+
+                            input {
+                                max-width: 521px;
+                                height: 50px;
+                                font-size: 14px;
+                                padding: 18px 16px;
+                                @include sm {
+                                    height: 61px;
+                                    font-size: 18px;
+                                }
+
+                                &::placeholder {
+                                    font-weight: 300;
+                                }
+
+                            }
+                        }
+
+                    }
+
+                }
+
+            }
+        }
+    }
+}

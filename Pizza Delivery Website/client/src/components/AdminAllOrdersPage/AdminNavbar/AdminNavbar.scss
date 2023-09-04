@@ -1,0 +1,69 @@
+@import "../../../css-config/mixins.scss";
+
+.navbar-section {
+    width: 100%;
+    padding: 0 20px;
+    padding-top: 20px;
+    .container {
+        max-width: 1600px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .left {
+            display: flex;
+            gap:12px;
+            align-items: center;
+            .logo {
+                width: 80px;
+                @include sm {
+                    width: 100px;
+                }
+                img {
+                    width: 100%;
+                }
+            }
+
+            .navbar-links {
+                list-style-type: none;
+                display: none;
+                gap:40px;
+                align-items: center;
+                li {
+                    font-size: 22px;
+                    &:hover {
+                        color: #525252;
+                        cursor: pointer;
+                    }
+                }
+                @include xl {
+                    display: flex;
+                }
+            }
+        }
+        .right {
+            display: flex;
+            align-items: center;
+            gap:30px;
+        
+            .logout-btn {
+                font-size: 22px;
+                color: #FF0404;
+                cursor: pointer;
+            }
+            @include sm {
+                gap:50px;
+            }
+            svg {
+                font-size: 26px;
+                @include sm {
+                    font-size: 32px;
+                }
+                &:hover {
+                    color: #525252;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

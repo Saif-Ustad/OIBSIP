@@ -1,0 +1,144 @@
+@import "../../../css-config/mixins.scss";
+
+.cardDetails {
+    width: 100%;
+
+    .container1 {
+        max-width: 437px;
+        min-height: 550px;
+        background: #96BECA;
+        border-radius: 20px;
+        padding: 30px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        margin: 0 auto;
+
+        h2 {
+            font-size: 20px;
+            color: #fff;
+            font-weight: 600;
+
+            @include sm {
+                font-size: 24px;
+            }
+        }
+
+        .card {
+            max-width: 387px;
+            min-height: 200px;
+            border-radius: 20px;
+            background: #000;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 25px 35px;
+
+            @include sm {
+                max-width: 387px;
+                min-height: 228px;
+            }
+
+            h4 {
+                font-size: 18px;
+                font-weight: 600;
+
+                @include sm {
+                    font-size: 20px;
+                }
+            }
+
+            .details {
+                .card-number {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 15px;
+
+                }
+
+                .bottom {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    .left {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 8px;
+
+                        h5 {
+                            font-size: 12px;
+
+                            @include sm {
+                                font-size: 14px;
+                            }
+                        }
+
+                        span {
+                            font-size: 14px;
+
+                            @include sm {
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                    .right {
+                        h1 {
+                            font-size: 24px;
+                            font-weight: 800;
+                            @include sm {
+                                font-size: 28px;
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+
+        .card-holder-details {
+            .in_row {
+                max-width: 387px;
+                height: 50px;
+                border: 1px solid #8B8A8A;
+                background: #FFF;
+                margin-top: 5px;
+                @include sm {
+                    height: 64px;
+                    margin-top: 15px;
+                }
+                input {
+                    width: 100%;
+                    height: 100%;
+                    padding: 5px 20px;
+                    font-size: 18px;
+                }
+            }
+            .date {
+                display: grid;
+                grid-template-columns: 70% 30%;
+            }
+
+        }
+
+        .btn {
+            width: 270px;
+            height: 40px;
+            border-radius: 10px;
+            background: #253F57;
+            align-self: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #FFF;
+            font-size: 22px;
+            font-weight: 700;
+            cursor: pointer;
+            @include sm {
+                height: 56px;
+                font-size: 28px;
+            }
+        }
+    }
+}

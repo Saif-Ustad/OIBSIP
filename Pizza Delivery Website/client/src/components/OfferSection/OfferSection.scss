@@ -1,0 +1,16 @@
+@import  "../../css-config/mixins.scss";
+
+.offerSection {
+    width: 100%;
+    margin-top: 20px;
+    @include lg {
+        margin-top: 160px;
+    }
+    .container {
+        max-width: 1600px;
+        margin: 0 auto;
+        img {
+            width: 100%;
+        }
+    }
+}

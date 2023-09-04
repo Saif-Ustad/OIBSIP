@@ -1,0 +1,37 @@
+@import "../../../css-config/mixins.scss";
+
+.singleItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    img {
+        width: 120px;
+        height: 120px;
+        border-radius: 235px;
+        @include sm {
+            width: 235px;
+            height: 230px;
+        }
+        &:hover {
+           transform:rotate(180deg);
+           transition: all 2s;
+        }
+    }
+    h4 {
+        font-size: 18px;
+        font-weight: 400;
+        margin-top: 10px;
+        @include sm {
+            font-size: 22px;
+        }
+    }
+    h3 {
+        color: #FF0404;
+        font-size: 15px;
+        margin-top: 5px;
+        @include sm {
+            font-size: 18px;
+        }
+    }
+}

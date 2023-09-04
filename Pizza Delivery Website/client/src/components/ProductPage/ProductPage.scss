@@ -1,0 +1,167 @@
+@import "../../css-config/mixins.scss";
+
+.ProductPage {
+    width: 100%;
+    padding: 0 30px;
+    .container {
+        max-width: 1600px;
+        min-height: 90vh;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap:60px;
+        
+        @include xl {
+            flex-direction: row;
+        }
+        .productImage {
+            flex: 45%;
+            text-align: center;
+            // border-radius: 50%;
+            // overflow: hidden;
+            img {
+                width: 90%;
+                @include xl {
+                    width: 100%;
+                }
+            }
+            
+        }
+        .product-Info {
+            flex: 55%;
+            display: flex;
+            flex-direction: column;
+            gap:20px;
+            h1 {
+                font-size: 35px;
+                font-weight: 600;
+                @include sm {
+                    font-size: 45px;
+                }
+            }
+            h2 {
+                color: #FF0404;
+                font-size: 24px;
+                font-weight: 700;
+                margin-top: 10px;
+                @include sm {
+                    font-size: 32px;
+                }
+            }
+            .rating {
+                display: flex;
+                gap:20px;
+                align-items: center;
+                margin-top: 5px;
+                .starts {
+                    display: flex;
+                    gap: 10px;
+                    svg {
+                        font-size: 18px;
+                        fill: #FFD130;
+                        @include sm {
+                            font-size: 22px;
+                        }
+                    }
+                }
+                span {
+                    font-size: 14px;
+                    @include sm {
+                        font-size: 16px;
+                    }
+                }
+            }
+            p {
+                font-size: 18px;
+                font-weight: 300;
+                max-width: 666px;
+                margin-top: 10px;
+                @include sm {
+                    font-size: 22px;
+                }
+            }
+            form {
+                .pizza-customization {
+                    display: flex;
+                    justify-content: space-between;
+                    flex-direction: column;
+                    margin-top: 20px;
+                    gap:50px;
+                    @include md {
+                        flex-direction: row;
+                        gap:0;
+                    }
+                    h3 {
+                        font-size: 22px;
+                        font-weight: 600;
+                    }
+                    .radio-btns {
+                        display: flex;
+                        flex-direction: column;
+                        gap:10px;
+                        margin-top: 23px;
+                        label {
+                            font-size: 18px;
+                            font-weight: 300;
+                            margin-top: 6px;
+                            margin-left: 8px;
+                        }
+
+                    }
+                    
+                }
+                .extra-cheese {
+                    display: flex;
+                    align-items: center;
+                    margin-top: 36px;
+                    span {
+                        margin-left: 8px;
+                        font-size: 18px;
+                        font-weight: 400;
+                    }
+                }
+                .quantity {
+                    display: flex;
+                    gap:20px;
+                    align-items: center;
+                    margin-top: 30px;
+                    input {
+                        width: 60px;
+                        height: 55px;
+                        font-size: 22px;
+                        padding: 15px;
+                        @include sm {
+                            width: 75px;
+                            height: 62px;
+                            font-size: 26px;
+                        }
+                    }
+                    button {
+                        color: #FFF;
+                        font-size: 20px;
+                        font-weight: 700;
+                        // padding: 14px 42px;
+                        border: none;
+                        background: #FF0404;
+                        width: 200px;
+                        height: 52px;
+                        &:hover {
+                            cursor: pointer;
+                            box-shadow: 2px 8px 35px 0px rgba(247, 0, 0, 0.90);
+        
+                        }
+                        @include sm {
+                            width: 232px;
+                            height: 62px;
+                            font-size: 26px;
+                        }
+                        
+                    }
+                }
+
+            }
+        }
+        
+    }
+}

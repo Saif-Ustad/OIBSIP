@@ -1,0 +1,139 @@
+@import "../../css-config/mixins.scss";
+
+.trackOrderPage {
+    width: 100%;
+    padding: 30px;
+    .container {
+        max-width: 1400px;
+        margin: 0 auto;
+        margin-top: 25px;
+        min-height: 80vh;
+        @include sm {
+            margin-top: 55px;
+        }
+        .title {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            gap:30px;
+            align-items: center;
+            margin-bottom: 40px;
+            @include md {
+                flex-direction: row;
+                gap:0;
+            }
+            .left {
+                display: flex;
+                align-items: center;
+                svg {
+                    font-size: 32px;
+                    margin-right: 20px;
+                    @include md {
+                        font-size: 42px;
+                    }
+                }
+                span {
+                    font-size: 25px;
+                    @include md {
+                        font-size: 42px;
+                    }
+                }
+            }
+            .right {
+                background: #fff;
+                padding: 5px 35px;
+                color: #FF0404;
+                font-size: 12px;
+                @include sm {
+                    font-size: 18px;
+                }
+                @include md {
+                    font-size: 24px;
+                }
+            }
+        }    
+        .tracking {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 auto;
+            margin-top: 40px;
+            @include sm {
+                margin-top: 100px;
+            }
+            .left {
+                display: flex;
+                gap:60px;
+                .c1 {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    
+                    svg {
+                        font-size: 28px;
+                        @include sm {
+                            font-size: 35px;
+                        }
+                        @include md {
+                            font-size: 46px;
+                        }
+                    }
+                }
+                .c2 {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    gap:12px;
+                    .verticalLine {
+                        width: 2px;
+                        height: 45px;
+                        background: #000;
+                        @include sm {
+                            height: 60px;
+                        }
+                        @include md {
+                            height: 80.025px;
+                        }
+                    }
+                    svg {
+                        font-size: 14px;
+                        @include sm {
+                            font-size: 18px;
+                        }
+                        @include md {
+                            font-size: 24px;
+                        }
+                    }
+                }
+                .c3 {
+                    display: flex;
+                    flex-direction: column;
+                    font-size: 18px;
+                    justify-content: space-between;
+                    transform: translateX(-20px);
+                    @include sm {
+                        font-size: 22px;
+                    }
+                    @include md {
+                        font-size: 28px;
+                    }
+                }
+                .inactive {
+                    color: #8B8A8A;
+                }
+                .active {
+                    color: #FF0404;
+                }
+            }
+            .right {
+                font-size: 16px;
+                @include sm {
+                    font-size: 18px;
+                }
+                @include md {
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+}

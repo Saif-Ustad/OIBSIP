@@ -1,0 +1,98 @@
+@import "../../css-config/mixins.scss";
+
+.OrderPage {
+    width: 100%;
+    padding: 30px;
+
+    .container {
+        max-width: 1400px;
+        margin: 0 auto;
+        margin-top: 55px;
+        min-height: 80vh;
+
+        .title {
+            display: flex;
+            gap: 25px;
+            margin-bottom: 40px;
+
+            svg {
+                font-size: 32px;
+
+                @include md {
+                    font-size: 42px;
+                }
+            }
+
+            span {
+                font-size: 25px;
+
+                @include md {
+                    font-size: 35px;
+                }
+            }
+        }
+
+        hr {
+            background: #000;
+            height: 2px;
+            border: #000;
+            margin-bottom: 25px;
+        }
+
+        .table_wrapper {
+            overflow-x: scroll;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+
+            .table_wrapper_inner {
+                min-width: 700px;
+
+                .table-head {
+                    background: #BBB;
+                    display: grid;
+                    grid-template-columns: 30% 40% 30%;
+                    text-align: center;
+                    margin-bottom: 17px;
+
+                    .heading {
+                        font-size: 18px;
+                        padding: 15px 0;
+
+                        @include md {
+                            font-size: 28px;
+                        }
+                    }
+                }
+
+                .table-content {
+                    background: #fff;
+                    display: grid;
+                    grid-template-columns: 30% 40% 30%;
+                    text-align: center;
+                    border: 0.5px solid #8B8A8A;
+                    margin-top: 10px;
+
+                    .content {
+                        font-size: 14px;
+                        font-weight: 400;
+                        padding: 15px 0;
+                        border: 0.5px solid #8B8A8A;
+
+                        @include md {
+                            font-size: 24px;
+                        }
+                    }
+
+                    .id {
+                        color: #FF0404;
+                        cursor: pointer;
+                    }
+                }
+
+            }
+        }
+
+    }
+}
